@@ -26,7 +26,7 @@ function App() {
 
   const fetchNews = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/news", {
+      const response = await axios.get("https://aconews-m62l.onrender.com/api/v1/news", {
         params: {
           keyword: keyword,
           country: region,
