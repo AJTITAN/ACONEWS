@@ -1,7 +1,9 @@
 const { default: axios } = require("axios");
 const express = require("express");
 const router = express.Router();
-
+router.get("/hi",(req,res)=>{
+    res.json({msg:"hi"});
+})
 router.get("/news", async (req, res) => {
     const { page = 1, limit = 10, keyword, country, category } = req.query;
     const start = (page - 1) * limit;
